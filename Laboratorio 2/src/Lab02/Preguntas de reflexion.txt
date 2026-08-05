@@ -1,0 +1,17 @@
+Kendall Valencia
+Laboratorio 2
+
+
+Preguntas de reflexión:
+
+Herencia: ¿Por qué Persona es abstracta? ¿Qué pasaría si no lo fuera? ¿Por qué Estudiante y Profesor usan super()?
+
+Interfaces: ¿Qué ventaja tiene que Estudiante implemente Comparable? ¿Cómo se relaciona con el polimorfismo?
+
+Paquetes: ¿Por qué separamos el código en modelo y servicio? ¿Qué beneficio tiene esta organización?
+
+Genéricos: ¿Qué significa <T> en Gestor<T>? ¿Por qué es útil tener una clase genérica? ¿Qué ventaja tiene sobre escribir un GestorEstudiantes y un GestorProfesores separados?
+
+Lambdas y Streams: En el código usamos .filter(e -> e.getPromedio() > 85). ¿Qué está pasando ahí? ¿Cómo se compara con un bucle for tradicional?
+
+Optional: ¿Por qué usamos Optional en buscarPrimero()? ¿Qué problema resuelve?
