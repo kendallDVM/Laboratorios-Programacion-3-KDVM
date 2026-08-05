@@ -44,34 +44,40 @@ public class Main {
         Gestor<Estudiante> gestorEstudiantes = new Gestor<>();
         gestorEstudiantes.agregarTodos(ana, carlos, maria, luis, laura);
 
+        IO.println("LISTA DE ESTUDIANTES: ");
         gestorEstudiantes.imprimirTodos();
 
+        IO.println("ESTUDIANTES CON PROMEDIO MAYOR A 85: ");
         List<Estudiante> destacados = gestorEstudiantes.filtrar(e -> e.getPromedio() > 85);
         destacados.forEach(System.out::println);
 
+        IO.println("ESTUDIANTES ORDENADOS POR PROMEDIO: ");
         List<Estudiante> ordenados = gestorEstudiantes.getTodos();
         ordenados.sort(Comparator.naturalOrder());
         ordenados.forEach(e -> System.out.println(e.getNombre() + " → " + e.getPromedio()));
 
-
+        IO.println("BUSQUEDA DE ESTUDIANTE: ");
         Optional<Estudiante> encontrado = gestorEstudiantes.buscarPrimero(e -> e.getNombre().contains("Luis"));
         encontrado.ifPresentOrElse(
                 e -> System.out.println("Estudiante encontrado: " + e.getDescripcion()),
                 () -> System.out.println("No se encontró ningún estudiante con ese nombre.")
         );
 
+        IO.println("ESTADISTICAS POR CARRERA: ");
         var conteoPorCarrera = gestorEstudiantes.getTodos().stream()
                 .collect(Collectors.groupingBy(Estudiante::getCarrera, Collectors.counting()));
         conteoPorCarrera.forEach((carrera, cantidad) ->
                 System.out.println(carrera + " → " + cantidad + " estudiante(s)")
         );
 
+        IO.println("POMEDIO GENERAL: ");
         double promedioGeneral = gestorEstudiantes.getTodos().stream()
                 .mapToDouble(Estudiante::getPromedio)
                 .average()
                 .orElse(0.0);
         System.out.println("El promedio general de todos los estudiantes es: " + promedioGeneral);
 
+        IO.println("LISTA DE PROFESORES: ");
         Gestor<Profesor> gestorProfesores = new Gestor<>();
         gestorProfesores.agregarTodos(prof1, prof2);
         gestorProfesores.imprimirTodos();
