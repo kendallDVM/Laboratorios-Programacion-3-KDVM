@@ -17,7 +17,26 @@ public class Main {
         ana.agregarNota(85.5);
         ana.agregarNota(92.0);
         ana.agregarNota(78.0);
-// ... crea más estudiantes
+
+        Estudiante carlos = new Estudiante("Carlos Gómez", 21, "B20250002", "Ingeniería en Sistemas");
+        carlos.agregarNota(80.5);
+        carlos.agregarNota(94.5);
+        carlos.agregarNota(78.8);
+
+        Estudiante maria = new Estudiante("María Pérez", 19, "B20250003", "Administración");
+        maria.agregarNota(75.9);
+        maria.agregarNota(90.3);
+        maria.agregarNota(95.6);
+
+        Estudiante luis = new Estudiante("Luis Fernández", 22, "B20250004", "Ingeniería en Sistemas");
+        luis.agregarNota(98.4);
+        luis.agregarNota(92.2);
+        luis.agregarNota(87.3);
+
+        Estudiante laura = new Estudiante("Laura Salas", 20, "B20250005", "Computación");
+        laura.agregarNota(84.2);
+        laura.agregarNota(78.7);
+        laura.agregarNota(88.5);
 
         Profesor prof1 = new Profesor("Dra. Elena Rojas", 45, "P-001", "Ingeniería en Sistemas");
         Profesor prof2 = new Profesor("Dr. Mario Castro", 52, "P-002", "Administración");
