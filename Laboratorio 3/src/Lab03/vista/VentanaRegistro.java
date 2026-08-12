@@ -43,6 +43,18 @@ public class VentanaRegistro extends JFrame {
         // Margen interno de 15px para no pegar el contenido con el borde
         panelPrincipal.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
 
+        // Etiqueta de texto centrada para el título del formulario
+        JLabel lblTitulo = new JLabel("Inscripción de Estudiantes", SwingConstants.CENTER);
+
+        // Aplica tipografía en negrita (BOLD) y tamaño 18
+        lblTitulo.setFont(new Font("Nunito", Font.BOLD, 18));
+
+        // Color del texto: rojo institucional UNA (RGB: 200, 16, 46)
+        lblTitulo.setForeground(new Color(200, 16, 46));
+
+        // Lo coloca en la región superior (NORTH) del panel principal
+        panelPrincipal.add(lblTitulo, BorderLayout.NORTH);
+
         // Panel del formulario en cuadrícula de 3 filas x 2 columnas con 8px de separación
         JPanel panelFormulario = new JPanel(new GridLayout(3, 2, 8, 8));
 
