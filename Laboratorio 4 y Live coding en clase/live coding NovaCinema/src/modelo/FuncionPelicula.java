@@ -7,7 +7,7 @@ public class FuncionPelicula extends ElementoComercial <TipoFormato>{
     private int capacidadTotal;
     private int asientosOcupados;
 
-    public FuncionPelicula(String codigo, String nombre, double precioBase, TipoFormato categoria, int sala, int duracionMinutos, int capacidadTotal, int asientosOcupados) {
+    public FuncionPelicula(String codigo, String nombre, double precioBase, TipoFormato categoria, int sala, int duracionMinutos, int capacidadTotal) {
 
         super(codigo, nombre, precioBase, categoria);
         this.sala = sala;
