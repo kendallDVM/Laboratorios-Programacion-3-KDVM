@@ -17,12 +17,12 @@ public abstract class ElementoComercial<K> implements Identificable <K>{
 
     @Override
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     @Override
     public String getCodigo() {
-        return Codigo;
+        return codigo;
     }
 
     public double getPrecioBase() {
