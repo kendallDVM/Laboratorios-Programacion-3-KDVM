@@ -18,11 +18,13 @@ public class VehiculoElectrico extends Vehiculo {
         this.ciclosDeCarga = ciclosDeCarga;
     }
 
+    public double getCiclosDeCarga() {return ciclosDeCarga;}
+
     // Getter que la vista (el controlador) va a necesitar para la barra de progreso
+
     public double getPorcentajeBateria() {
         return porcentajeBateria;
     }
-
     @Override
     // Sobrescritura: cómo inicia ruta un vehículo eléctrico
     public void iniciarRuta() {
