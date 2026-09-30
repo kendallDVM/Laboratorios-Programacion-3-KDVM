@@ -41,8 +41,8 @@ public class ColaMantenimiento<T extends Vehiculo> {
 
     public void restaurarPendiente(T vehiculo) {
         if (vehiculo.getEstado() == EstadoVehiculo.TALLER &&
-                !filaDeEspera.contains(vehiculo) filaDeEspera.offer(vehiculo)); {
-            throw new IllegalStateException();
+                !filaDeEspera.contains(vehiculo)) {
+            filaDeEspera.offer(vehiculo);
 
         }
     }

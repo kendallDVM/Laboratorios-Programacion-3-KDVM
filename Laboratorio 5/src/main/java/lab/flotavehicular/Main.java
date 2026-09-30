@@ -17,7 +17,7 @@ public class Main extends Application {
 
         // FXMLLoader lee el archivo FXML (la vista). Aún NO existe, lo crearemos en clase
         FXMLLoader loader = new FXMLLoader(
-                Main.class.getResource("/lab/flotavehicular/view/flotaView.fxml")
+                Main.class.getResource("/lab/flotavehicular/view/Flotaview.fxml")
         );
 
         // La escena se construye cargando el FXML
