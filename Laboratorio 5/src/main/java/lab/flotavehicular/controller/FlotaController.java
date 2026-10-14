@@ -5,7 +5,7 @@ import lab.flotavehicular.factory.VehiculoFactory;
 import lab.flotavehicular.model.*;
 import lab.flotavehicular.repository.PersistenciaException;
 import lab.flotavehicular.repository.RepositorioVehiculo;
-import lab.flotavehicular.repository.RepositorioVehiculoTxt;
+import lab.flotavehicular.RepositorioVehiculoMySQL;
 import lab.flotavehicular.service.FlotaService;
 
 import javafx.fxml.FXML;
@@ -82,9 +82,7 @@ public class FlotaController {
 
 
     public FlotaController() {
-        RepositorioVehiculo repositorio = new RepositorioVehiculoTxt(
-                Path.of("datos", "vehiculos.txt")
-        );
+        RepositorioVehiculo repositorio = new RepositorioVehiculoMySQL();
         this.flota = new FlotaService(repositorio);
         this.colaMantenimiento = new ColaMantenimiento<>();
 

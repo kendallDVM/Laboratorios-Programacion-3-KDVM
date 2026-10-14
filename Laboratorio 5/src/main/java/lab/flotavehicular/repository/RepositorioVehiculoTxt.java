@@ -55,6 +55,41 @@ public class RepositorioVehiculoTxt implements RepositorioVehiculo {
     }
 
     @Override
+    public void insertar(Vehiculo vehiculo) {
+        List<Vehiculo> vehiculos = cargarTodos();
+        vehiculos.add(vehiculo);
+        guardarTodos(vehiculos);
+    }
+
+    @Override
+    public void actualizar(Vehiculo vehiculo) {
+        List<Vehiculo> vehiculos = cargarTodos();
+        for (int i = 0; i < vehiculos.size(); i++) {
+            if (vehiculos.get(i).getPlaca().equalsIgnoreCase(vehiculo.getPlaca())) {
+                vehiculos.set(i, vehiculo);
+                guardarTodos(vehiculos);
+                return;
+            }
+        }
+        throw new PersistenciaException(
+                "No se encontró el vehículo con placa " + vehiculo.getPlaca() + " para actualizar.", null
+        );
+    }
+
+    @Override
+    public void eliminar(String placa) {
+        List<Vehiculo> vehiculos = cargarTodos();
+        boolean eliminado = vehiculos.removeIf(
+                vehiculo -> vehiculo.getPlaca().equalsIgnoreCase(placa)
+        );
+        if (!eliminado) {
+            throw new PersistenciaException(
+                    "No se encontró el vehículo con placa " + placa + " para eliminar.", null
+            );
+        }
+        guardarTodos(vehiculos);
+    }
+
     public void guardarTodos(List<Vehiculo> vehiculos) {
         try {
             Path carpeta = archivo.getParent();

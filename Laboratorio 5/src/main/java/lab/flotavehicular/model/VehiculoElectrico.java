@@ -18,7 +18,7 @@ public class VehiculoElectrico extends Vehiculo {
         this.ciclosDeCarga = ciclosDeCarga;
     }
 
-    public double getCiclosDeCarga() {return ciclosDeCarga;}
+    public int getCiclosDeCarga() {return ciclosDeCarga;}
 
     // Getter que la vista (el controlador) va a necesitar para la barra de progreso
 

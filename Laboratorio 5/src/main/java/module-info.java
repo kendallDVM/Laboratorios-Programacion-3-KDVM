@@ -3,6 +3,8 @@ module lab.flotavehicular {
     // Módulos de JavaFX incluidos en el proyecto
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;        // AGREGAR: habilita JDBC (Connection, CallableStatement...)
+    requires mysql.connector.j; // AGREGAR: habilita el driver de MySQL (nombre automático del jar 9.x)
     requires javafx.web;
 
     // Librerías adicionales seleccionadas al crear el proyecto (Paso 3.3)
